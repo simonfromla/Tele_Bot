@@ -26,7 +26,7 @@ SECRET_KEY = '=nw4fmws+=+p-ewh&8kf4208ojlieb5-2yyjy0i$m$_*@wq3=j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8f073760.ngrok.io', '127.0.0.1', '39b9e7b7.ngrok.io']
+ALLOWED_HOSTS = ['8f073760.ngrok.io', '127.0.0.1', '39b9e7b7.ngrok.io', 'herokuapp.com', 'telebot00.herokuapp.com']
 
 
 # Application definition
