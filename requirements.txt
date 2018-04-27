@@ -3,6 +3,7 @@ async-timeout==2.0.1
 attrs==17.4.0
 chardet==3.0.4
 Django==1.11.8
+gunicorn==19.7.1
 idna==2.6
 idna-ssl==1.0.1
 multidict==4.2.0

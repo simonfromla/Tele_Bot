@@ -20,7 +20,7 @@ def _display_help():
 @method_decorator(csrf_exempt, name='dispatch')
 class CommandReceiveView(View):
     def __init__(self):
-        self.token = '56430501:AAFA2nbvNmTmuHX-CZlCtjJkHfKK-j9K9I'
+        self.token = '564305019:AAFA2nbvNmTmuHX-CZlCtjJkHfKK-j9K9IY'
         self.telegram_bot = telepot.Bot(self.token)
 
     # def get(self, request, *args, **kwargs):
