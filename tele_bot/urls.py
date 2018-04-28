@@ -15,8 +15,16 @@ Including another URLconf
 """
 from django.conf.urls import url, include
 from django.contrib import admin
+from oauth import views as oauthview
+from django.contrib.auth.views import login
+from django.views.decorators.csrf import csrf_exempt
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^$', oauthview.index),
     url(r'^bot/', include('bot.urls')),
+    url(r'^oauth2callback', oauthview.auth_return),
+    url(r'^accounts/login/$', login,
+                        {'template_name': 'login.html'}, name='login'),
 ]

@@ -16,6 +16,8 @@ import os
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
+GOOGLE_OAUTH2_CLIENT_SECRETS_JSON = 'client_secret.json'
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
@@ -26,7 +28,7 @@ SECRET_KEY = '=nw4fmws+=+p-ewh&8kf4208ojlieb5-2yyjy0i$m$_*@wq3=j'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8f073760.ngrok.io', '127.0.0.1', '39b9e7b7.ngrok.io', 'herokuapp.com', 'telebot00.herokuapp.com']
+ALLOWED_HOSTS = ['8f073760.ngrok.io', '127.0.0.1', '39b9e7b7.ngrok.io', 'herokuapp.com', 'telebot00.herokuapp.com', 'e7196697.ngrok.io', 'localhost']
 
 
 # Application definition
@@ -39,6 +41,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bot',
+    'oauth',
 ]
 
 MIDDLEWARE = [

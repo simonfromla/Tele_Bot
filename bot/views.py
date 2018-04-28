@@ -7,13 +7,20 @@ from django.template.loader import render_to_string
 from django.utils.decorators import method_decorator
 from django.views.generic import View
 from django.views.decorators.csrf import csrf_exempt
+from .services import authorize
 
 # token = '264305012:AAFA2nbvNmTmuHX-CZlCtjJkHfKK-j9K9I2'
 # tbot = telepot.Bot(token)
 # translate, define, parse for dates
 
+
 def _display_help():
     return render_to_string('help.md')
+
+
+def _auth():
+    statement = authorize()
+    return statement
 
 
 # CSRF Exempt for the POST requests from Telegram
@@ -29,7 +36,7 @@ class CommandReceiveView(View):
     def post(self, request, *args, **kwargs):
         base_commands = {
             'help': _display_help,
-            # '/define': _display_help,
+            'auth': _auth,
         }
 
         raw = request.body.decode('utf-8')
